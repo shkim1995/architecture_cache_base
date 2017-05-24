@@ -1,0 +1,497 @@
+Vivado Simulator 2016.4
+Time resolution is 1 ps
+inst at ctrl module : xxxx
+ctrl : nothing!
+RF changed : 0000, 0000, 0000, 0000
+
+-----------------------------------
+
+pc_out : ffff
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0000
+
+-----------------------------------
+
+
+-----------------------------------
+
+pc_out : 0001
+inst at ctrl module : 9023
+ctrl : JMP
+
+-----------------------------------
+
+pc_out : 0023
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+
+-----------------------------------
+
+pc_out : 0024
+inst at ctrl module : 6000
+ctrl : LHI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0025
+inst at ctrl module : f01c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0026
+inst at ctrl module : 6100
+ctrl : LHI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0027
+inst at ctrl module : f41c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0028
+inst at ctrl module : 6200
+ctrl : LHI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0029
+inst at ctrl module : f81c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 002a
+inst at ctrl module : 6300
+ctrl : LHI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 002b
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 002c
+inst at ctrl module : 4401
+ctrl : ADI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 002d
+inst at ctrl module : f01c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0001, 0000, 0000, 0000
+
+-----------------------------------
+
+pc_out : 002e
+inst at ctrl module : 4001
+ctrl : ADI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 002f
+inst at ctrl module : f01c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0000, 0000, 0000
+
+-----------------------------------
+
+pc_out : 0030
+inst at ctrl module : 5901
+ctrl : ORI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0031
+inst at ctrl module : f41c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0001, 0000, 0000
+
+-----------------------------------
+
+pc_out : 0032
+inst at ctrl module : 5502
+ctrl : ORI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0033
+inst at ctrl module : f41c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0000
+
+-----------------------------------
+
+pc_out : 0034
+inst at ctrl module : 5503
+ctrl : ORI
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0035
+inst at ctrl module : f41c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0036
+inst at ctrl module : f2c0
+ctrl : ADD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0037
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0002
+
+-----------------------------------
+
+pc_out : 0038
+inst at ctrl module : f6c0
+ctrl : ADD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0039
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0003
+
+-----------------------------------
+
+pc_out : 003a
+inst at ctrl module : f1c0
+ctrl : ADD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 003b
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0005
+
+-----------------------------------
+
+pc_out : 003c
+inst at ctrl module : f2c1
+ctrl : SUB
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 003d
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0002
+
+-----------------------------------
+
+pc_out : 003e
+inst at ctrl module : f8c1
+ctrl : SUB
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 003f
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, fffe
+
+-----------------------------------
+
+pc_out : 0040
+inst at ctrl module : f6c1
+ctrl : SUB
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0041
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0003
+
+-----------------------------------
+
+pc_out : 0042
+inst at ctrl module : f9c1
+ctrl : SUB
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0043
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, fffd
+
+-----------------------------------
+
+pc_out : 0044
+inst at ctrl module : f1c1
+ctrl : SUB
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0045
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, ffff
+
+-----------------------------------
+
+pc_out : 0046
+inst at ctrl module : f4c1
+ctrl : SUB
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0047
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0001
+
+-----------------------------------
+
+pc_out : 0048
+inst at ctrl module : f2c2
+ctrl : AND
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 0049
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+RF changed : 0002, 0003, 0000, 0000
+
+-----------------------------------
+
+pc_out : 004a
+inst at ctrl module : f6c2
+ctrl : AND
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 004b
+inst at ctrl module : fc1c
+ctrl : WWD
+
+-----------------------------------
+
+inst at ctrl module : 0000
+BUBBLE INSTUCTION!!
+
+-----------------------------------
+
+pc_out : 004c
+inst at ctrl module : f1c2
+ctrl : AND
+
+-----------------------------------
+
+inst at ctrl module : 0000
