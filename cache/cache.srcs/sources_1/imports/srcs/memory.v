@@ -3,9 +3,11 @@
 `define MEMORY_SIZE 256	//	size of memory is 2^8 words (reduced size)
 `define WORD_SIZE 16	//	instead of 2^16 words to reduce memory
 			//	requirements in the Active-HDL simulator 
+`define I_LATENCY 6
+`define D_LATENCY 2
 
 module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_writeM, d_address, d_data, i_ready, d_ready, 
-               IFID_Flush, IDEX_Flush,  /*debugging*/i_count, d_outputData);
+               IFID_Flush, IDEX_Flush,  /*debugging*/i_count, d_count, d_outputData);
 	input clk;
 	wire clk;
 	input reset_n;
@@ -47,33 +49,34 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_wri
 	initial begin
 	
 	   i_ready <= 0;
-	   d_ready <= 0;
+	   d_ready <= 1;
 	
 	end
 	
-	output[1:0] i_count;
-	reg[1:0] i_count;
+	output[7:0] i_count;
+	reg[7:0] i_count;
 	
-	initial i_count<=1;
+	initial i_count<=`I_LATENCY;
 	
 	always @(i_address or i_readM) begin
 	   
 	   //new instruction to be outputed
 	   if(i_readM) begin
-	       i_count<=1;
+	       i_count<=`I_LATENCY;
 	       i_ready<=0;
 	   end
 	   
 	end
 	
-	reg[1:0] d_count;
+	reg[7:0] d_count;
+	output[7:0] d_count;
 	
-	initial d_count <= 1;
+	initial d_count <= `D_LATENCY;
 	
 	always @(d_address or d_readM or d_writeM) begin
 	
 	   if(d_readM || d_writeM) begin
-	       d_count<=1;
+	       d_count<=`D_LATENCY;
 	       d_ready<=0;
 	   end
 	
@@ -302,7 +305,7 @@ module Memory(clk, reset_n, i_readM, i_writeM, i_address, i_data, d_readM, d_wri
 				if(i_readM) begin
 				    
 				    if(i_count>0) begin
-				        i_count <= i_count-1;
+				        if(!d_readM && !d_writeM) i_count <= i_count-1;
 				    end
 				    
 				    else if(i_count==0) begin

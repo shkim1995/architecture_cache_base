@@ -18,7 +18,7 @@ module cpu_TB();
 	wire i_ready;
 	wire d_ready;
 	
-	wire[1:0] i_count;
+	wire[7:0] d_count;
 	
 	// Data memory interface
 	wire d_readM;
@@ -31,6 +31,7 @@ module cpu_TB();
 
 	// for debuging purpose
 	wire [`WORD_SIZE-1:0] num_inst;		// number of instruction during execution
+	wire [`WORD_SIZE-1:0] to_num_inst;		// number of instruction during execution
 	wire [`WORD_SIZE-1:0] output_port;	// this will be used for a "WWD" instruction
 	wire is_halted;				// set if the cpu is halted
 
@@ -39,6 +40,8 @@ module cpu_TB();
 	//debugging
 	wire PC_enable;
 	
+	wire[15:0] IF_inst;
+	wire[15:0] ID_inst;
     wire[15:0] EX_inst;
     wire[15:0] ALU_out;
     
@@ -65,7 +68,7 @@ module cpu_TB();
 	           .d_data(d_data), 
 	           .i_ready(i_ready), 
 	           .d_ready(d_ready), 
-	           .i_count(i_count),
+	           .d_count(d_count),
 	           
 	           .IDEX_Flush(IDEX_Flush),
                .IFID_Flush(IFID_Flush));		   
@@ -86,6 +89,7 @@ module cpu_TB();
              .d_ready(d_ready), 
 
 	         .num_inst(num_inst), 
+	         .to_num_inst(to_num_inst),
 	         .output_port(output_port), 
 	         .is_halted(is_halted),
 	         
@@ -93,8 +97,11 @@ module cpu_TB();
              .IFID_Flush(IFID_Flush),
 	         
 	         .PC_enable(PC_enable),
+	         .IF_inst(IF_inst),
+	         .ID_inst(ID_inst),
              .EX_inst(EX_inst),
              .ALU_out(ALU_out),
+             .ID_WWD(ID_WWD),
              .EX_WWD(EX_WWD),
              
              .ALU_in1(ALU_in1),

@@ -248,7 +248,7 @@ module control(
             Branch<=0;
             Halt<=0;
             
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
         end
         
@@ -266,7 +266,7 @@ module control(
             Branch<=0;
             Halt<=0;
             
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
         end
         
@@ -282,7 +282,7 @@ module control(
             Branch<=0;
             Halt<=0;
             
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
         end
         
@@ -299,7 +299,7 @@ module control(
             RegDist = 2'b10;
             Halt<=0;
             
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
         end    
         
@@ -315,7 +315,7 @@ module control(
             Branch<=0;
             Halt<=0;
             
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
         end
         
@@ -333,7 +333,7 @@ module control(
             RegDist = 2'b10;
             Halt<=0;
             
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
         end
         
@@ -351,7 +351,7 @@ module control(
             Branch<=1;
             Halt<=0;
                     
-            WWD <= 1;
+            WWD <= 0;
             isFetched <= 1;
             
             if(opcode==0) Alucode <= 4'b0011; 

@@ -21,7 +21,7 @@ module cpu(
         output d_writeM, 
         output [`WORD_SIZE-1:0] d_address, 
         inout [`WORD_SIZE-1:0] d_data, 
-
+        output [`WORD_SIZE-1:0] to_num_inst, //debugging
         output [`WORD_SIZE-1:0] num_inst, 
         output [`WORD_SIZE-1:0] output_port, 
         output is_halted,
@@ -31,8 +31,12 @@ module cpu(
         
         //debugging
         output PC_enable,
+        
+        output[15:0] IF_inst,
+        output[15:0] ID_inst,
         output[15:0] EX_inst,
         output[15:0] ALU_out,
+        output ID_WWD,
         output EX_WWD,
         
         
@@ -106,7 +110,7 @@ module cpu(
     
     
     always @(negedge Clk) begin
-        if(EX_isFetched) begin 
+        if(EX_isFetched && IDEX_enable) begin 
             to_num_inst<=to_num_inst+1; 
         end
     end
@@ -117,6 +121,8 @@ module cpu(
     
     //debugging 
     wire PC_enable;
+    wire[15:0] IF_inst;
+    wire[15:0] ID_inst;
     wire[15:0] EX_inst;
     wire[15:0] ALU_out;
     
@@ -162,6 +168,8 @@ module cpu(
         
         //debugging
         .PC_enable(PC_enable),
+        .IFID_inst_out(ID_inst),
+        .IFID_inst_in(IF_inst),
         .EX_inst(EX_inst),
         .ALU_out(ALU_out),
         

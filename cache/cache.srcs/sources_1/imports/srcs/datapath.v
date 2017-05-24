@@ -53,6 +53,8 @@ module datapath(
     //debugging
     
     output PC_enable,
+    output[15:0] IFID_inst_in,
+    output[15:0] IFID_inst_out,
     output[15:0] EX_inst,
     output[15:0] ALU_out,
     
@@ -87,20 +89,20 @@ module datapath(
     wire IDEX_enable;
     wire EXMEM_enable;
     
-    assign PC_enable = (!isStalled && i_ready) || !reset_n || IFID_Flush;
+    assign PC_enable = (!isStalled && i_ready && d_ready) || !reset_n || IFID_Flush;
     
     //always @(posedge clk) $display("SDDSADSADSADASD : %b, i_ready : %b, reset_n : %b", PC_enable, i_ready, reset_n); 
-//    assign IFID_enable = !isStalled && d_ready;
+    assign IFID_enable = !isStalled && d_ready;
     
-//    assign IDEX_enable = d_ready;
+    assign IDEX_enable = d_ready;
     
-//    assign EXMEM_enable = d_ready;
+    assign EXMEM_enable = d_ready;
     
-    assign IFID_enable = 1;
+//    assign IFID_enable = 1;
     
-    assign IDEX_enable = 1;
+//    assign IDEX_enable = 1;
     
-    assign EXMEM_enable = 1;
+//    assign EXMEM_enable = 1;
     
     
     //Jump & Branch Addr
@@ -469,7 +471,7 @@ IFID ifid(
     .pc_out(ID_pc),
 
     .clk(clk),
-    .flush(IFID_Flush || !i_ready),
+    .flush(IFID_Flush || (!i_ready&&d_ready)),
     //data signals
     .inst_in(IFID_inst_in),
     .inst_out(IFID_inst_out),
@@ -569,7 +571,7 @@ EXMEM exmem(
 MEMWB memwb(
     
     .clk(clk),
-    .flush(0),
+    .flush(!d_ready),
     
     //data signals
     
